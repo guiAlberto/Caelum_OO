@@ -1,0 +1,6 @@
+class MeuPrograma {
+	public static void main(String[] args) {
+		System.out.println("uma mensagem diferente");
+		System.out.println("uma outra mensagem diferente");
+	}
+}
