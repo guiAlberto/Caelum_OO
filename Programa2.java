@@ -19,7 +19,7 @@ class Porta{
 	}
 	
 	boolean estaAberta(){
-		return aberta;
+		return this.aberta;
 	}
 	
 	void imprime(){
