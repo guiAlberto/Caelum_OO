@@ -63,18 +63,3 @@ class Empresa{
 		this.empregados = temp;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
