@@ -1,8 +1,8 @@
 package banco;
 
-public class Conta {
+public abstract class Conta {
 	
-	private double saldo;
+	protected double saldo;
 
 	void deposita(double valor){
 		this.saldo += valor;
@@ -16,9 +16,11 @@ public class Conta {
 		return this.saldo;
 	}
 	
-	public void atualiza(double taxa) {
-		this.saldo += this.saldo * taxa;
-	}
+//	public void atualiza(double taxa) {
+//		this.saldo += this.saldo * taxa;
+//	}
+	
+	public abstract void atualiza(double taxa);
 
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
