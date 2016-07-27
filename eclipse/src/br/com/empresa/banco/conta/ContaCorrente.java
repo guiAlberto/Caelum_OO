@@ -1,9 +1,9 @@
-package banco;
+package br.com.empresa.banco.conta;
 
 public class ContaCorrente extends Conta implements Tributavel {
 
 	@Override
-	void deposita(double valor) {
+	public void deposita(double valor) {
 		super.deposita(valor - 0.10);
 	}
 

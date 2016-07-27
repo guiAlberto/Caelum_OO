@@ -1,4 +1,4 @@
-package banco;
+package br.com.empresa.banco.conta;
 
 public class ValorInvalidoException extends RuntimeException {
 

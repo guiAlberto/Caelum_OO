@@ -1,4 +1,8 @@
-package banco;
+package br.com.empresa.banco;
+
+import br.com.empresa.banco.conta.Conta;
+import br.com.empresa.banco.conta.ContaPoupanca;
+import br.com.empresa.banco.conta.ValorInvalidoException;
 
 public class TestaDeposita {
 
