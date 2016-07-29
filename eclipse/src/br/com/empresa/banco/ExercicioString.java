@@ -15,8 +15,19 @@ public class ExercicioString {
 		System.out.println(getCaracteresInvertidos(palindromo2));
 		System.out.println(getPalavrasInvertidas(palindromo1));
 		System.out.println(getPalavrasInvertidas(palindromo2));
+		
+		convertaParaNumero("1234");
 	}
 	
+	private static void convertaParaNumero(String string) {
+		int numero = 0;
+		int aux = 0;
+		for(int i = string.length() - 1; i >= 0; i--){
+			numero += Character.getNumericValue(string.charAt(i)) * Math.pow(10, aux++);
+		}
+		System.out.println(numero);
+	}
+
 	private static String getPalavrasInvertidas(String palindromo) {
 		String[] palavras = palindromo.split(" ");
 		StringBuilder stringBuilder = new StringBuilder();
