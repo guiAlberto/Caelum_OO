@@ -6,7 +6,7 @@ import br.com.empresa.banco.conta.Tributavel;
 public class TestaTributavel {
 
 	public static void main(String[] args) {
-		ContaCorrente cc = new ContaCorrente();
+		ContaCorrente cc = new ContaCorrente(0, "");
 		cc.deposita(100);
 		System.out.println(cc.calculaTributos());
 		

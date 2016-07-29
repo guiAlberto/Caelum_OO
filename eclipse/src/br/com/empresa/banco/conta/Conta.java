@@ -10,6 +10,28 @@ package br.com.empresa.banco.conta;
 public abstract class Conta {
 
 	protected double saldo;
+	protected int numero;
+	private String nome;
+
+	public Conta(int numero, String nome) {
+		super();
+		this.numero = numero;
+		this.nome = nome;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Conta conta = (Conta) obj;
+		return this.numero == conta.numero && this.nome.equals(conta.nome);
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
 
 	/**
 	 * Método que incrementa algum valor maior do que zero ao saldo da conta
@@ -26,7 +48,7 @@ public abstract class Conta {
 
 	/**
 	 * Método que retira algm valor da conta
-	 *  
+	 * 
 	 * @param valor
 	 */
 	public void saca(double valor) {
@@ -35,6 +57,7 @@ public abstract class Conta {
 
 	/**
 	 * getter do atributo saldo
+	 * 
 	 * @return
 	 */
 	public double getSaldo() {
@@ -59,6 +82,11 @@ public abstract class Conta {
 	 */
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
+	}
+
+	@Override
+	public String toString() {
+		return "Esse objeto é do tipo conta e com saldo: " + this.saldo;
 	}
 
 }
