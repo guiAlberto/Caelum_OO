@@ -13,6 +13,10 @@ public abstract class Conta {
 	protected int numero;
 	private String nome;
 
+	public String getNome() {
+		return nome;
+	}
+
 	public Conta(int numero, String nome) {
 		super();
 		this.numero = numero;
@@ -86,7 +90,11 @@ public abstract class Conta {
 
 	@Override
 	public String toString() {
-		return "Esse objeto é do tipo conta e com saldo: " + this.saldo;
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append("titular: " + this.nome + "\n");
+		stringBuilder.append("numero: " + this.numero + "\n");
+		return stringBuilder.toString();
+
 	}
 
 }
