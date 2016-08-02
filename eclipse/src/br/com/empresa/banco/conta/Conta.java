@@ -23,14 +23,36 @@ public abstract class Conta {
 		this.nome = nome;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		Conta conta = (Conta) obj;
-		return this.numero == conta.numero && this.nome.equals(conta.nome);
-	}
+//	@Override
+//	public boolean equals(Object obj) {
+//		Conta conta = (Conta) obj;
+//		return this.numero == conta.numero && this.nome.equals(conta.nome);
+//	}
 
 	public int getNumero() {
 		return numero;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + numero;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Conta other = (Conta) obj;
+		if (numero != other.numero)
+			return false;
+		return true;
 	}
 
 	public void setNumero(int numero) {

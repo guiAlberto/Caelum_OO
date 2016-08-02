@@ -1,4 +1,8 @@
-package br.com.empresa.banco.conta;
+package br.com.empresa.banco;
+
+import br.com.empresa.banco.conta.ContaCorrente;
+import br.com.empresa.banco.conta.ContaPoupanca;
+import br.com.empresa.banco.conta.GuardadorDeObjetos;
 
 public class TestaGuardadorDeObjetos {
 

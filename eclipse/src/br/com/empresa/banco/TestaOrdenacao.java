@@ -1,15 +1,14 @@
-package br.com.empresa.banco.conta;
+package br.com.empresa.banco;
 
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+import br.com.empresa.banco.conta.ContaPoupanca;
+
 public class TestaOrdenacao {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		List<ContaPoupanca> contas = new LinkedList<>();
 		
